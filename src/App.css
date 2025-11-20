@@ -1,0 +1,62 @@
+.hero-section {
+  min-height: 90vh;
+  background: linear-gradient(rgba(77, 3, 3, 0.6),rgba(0, 0, 0, 0.5)),
+              url('/images/hero.jpg') center/cover no-repeat;
+  padding: 5rem 0;
+}
+
+
+.hero-section .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.trinity-section {
+  background-color: #f8f9fa;
+}
+
+.video-wrapper iframe {
+  border-radius: 8px;
+}
+
+
+.program-card {
+  transition: transform 0.3s ease;
+}
+.program-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-wrapper {
+  position: relative;
+}
+.card-img-wrapper .img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.05));
+  pointer-events: none;
+}
