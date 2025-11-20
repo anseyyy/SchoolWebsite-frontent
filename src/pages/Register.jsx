@@ -15,10 +15,18 @@ function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        axios.post('https://schoolwebsite-w7bl.onrender.com/register',RegisterData)
-        .then(result => console.log(result))
-        .catch(err => console.log(err))
-        
+        try {
+            const res = await axios.post('https://schoolwebsite-w7bl.onrender.com/register', RegisterData)
+            console.log("registration successfull", res);
+
+            if (res.status == 200) {
+                setError('');
+                navigate('/login')
+            }
+        } catch (err) {
+            setError('Invalid credentials');
+        }
+
     }
     return (
         <Container className="py-5">
