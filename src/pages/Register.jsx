@@ -21,7 +21,7 @@ function Register() {
             const res = await axios.post('https://schoolwebsite-w7bl.onrender.com/register', RegisterData)
             console.log("registration successfull", res);
 
-            if (res.status == 200) {
+            if (res.status == 201) {
                 setError('');
                 navigate('/login')
             }
