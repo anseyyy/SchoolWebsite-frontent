@@ -9,14 +9,13 @@ function Register() {
     const navigate = useNavigate();
     const [error, setError] = useState('');
 
-    const [name, setName] = useState()
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
+    const handleChange = (e) =>
+        setRegisterData({ ...RegisterData, [e.target.name]: e.target.value });
 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        axios.post('https://schoolwebsite-w7bl.onrender.com/register',{name,email,password})
+        axios.post('https://schoolwebsite-w7bl.onrender.com/register',RegisterData)
         .then(result => console.log(result))
         .catch(err => console.log(err))
         
