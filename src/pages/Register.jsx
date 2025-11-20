@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Container, Form, Button, Alert, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 
 function Register() {
 
     const navigate = useNavigate();
-    const [error, setError] = useState('');
     const [RegisterData, setRegisterData] = useState({name:"", email: '', password: '' });
         console.log(RegisterData);
 
@@ -22,11 +24,11 @@ function Register() {
             console.log("registration successfull", res);
 
             if (res.status == 201) {
-                setError('');
+                toast.error("User already exists. Please log in.");
                 navigate('/login')
             }
         } catch (err) {
-            setError('Invalid credentials');
+            toast.error("Something went wrong. Try again.");
         }
 
     }
@@ -43,7 +45,8 @@ function Register() {
                 </Col>
             </Row>
 
-            {error && <Alert variant="danger">{error}</Alert>}
+            
+            <ToastContainer position="top-right" autoClose={3000} />
             <Form onSubmit={handleSubmit}>
 
                 <Form.Group className="mb-3">

@@ -46,7 +46,7 @@ function Landing() {
               
               <Col md={6} className="mb-4 mb-md-0">
                 <div className="p-4 bg-white shadow-sm rounded" style={{ maxwidth: "560px", maxHeight: '315' }}>
-                  <h2 className="text-danger fw-bold">Trinity of Values</h2>
+                  <h2 className=" fw-bold">Trinity of Values</h2>
                   <p className="mt-3 text-muted fs-5">
                     EduSphere empowers students to succeed in college and thrive as thoughtful, engaged citizens in a rapidly evolving and competitive world.
                     We prepare young minds to meet challenges with confidence and purpose—grounded in academics, character, and community.

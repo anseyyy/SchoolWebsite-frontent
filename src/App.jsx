@@ -13,6 +13,8 @@ import Login from './pages/Login'
 import Admin from './pages/Admin'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Register from './pages/Register'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 
