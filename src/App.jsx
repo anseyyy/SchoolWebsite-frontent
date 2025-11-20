@@ -12,6 +12,7 @@ import FacilityPage from './pages/FacilityPage'
 import Login from './pages/Login'
 import Admin from './pages/Admin'
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Register from './pages/Register'
 
 
 
@@ -31,6 +32,8 @@ function App() {
       <Route path='/programs' element={<Programs/>} />
       <Route path='/facility' element={<FacilityPage/>} />
       <Route path='/login' element={<Login/>} />
+      <Route path='/register' element={<Register/>} />
+
       <Route path='/admin' element={<Admin />} />
 
 

@@ -41,6 +41,7 @@ function Header() {
 
                         <NavDropdown title="OFFICIALS" id="alumni-dropdown">
                             <NavDropdown.Item as={Link} to={'/login'}>Login</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to={'/register'}>Register</NavDropdown.Item>
                         </NavDropdown>
 
                     </Nav>
