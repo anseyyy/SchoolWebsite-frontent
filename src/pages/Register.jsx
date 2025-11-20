@@ -7,27 +7,19 @@ import { Link, useNavigate } from 'react-router-dom';
 function Register() {
 
     const navigate = useNavigate();
-
-
-
     const [error, setError] = useState('');
 
+    const [name, setName] = useState()
+    const [email, setEmail] = useState()
+    const [password, setPassword] = useState()
 
-    const handleChange = (e) =>
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-            const res = await axios.post('https://schoolwebsite-w7bl.onrender.com/register', formData);
-            console.log("data tranffered successfully", res);
-
-            if (res.status == 200) {
-                setError('');
-                navigate('/login')
-            }
-        } catch (err) {
-            setError('Invalid credentials');
-        }
+        axios.post('https://schoolwebsite-w7bl.onrender.com/register',{name,email,password})
+        .then(result => console.log(result))
+        .catch(err => console.log(err))
+        
     }
     return (
         <Container className="py-5">
