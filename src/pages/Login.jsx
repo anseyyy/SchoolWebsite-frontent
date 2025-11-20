@@ -16,8 +16,8 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('https://schoolwebsite-5ayf.onrender.com/login', formData);
-            console.log(res);
+            const res = await axios.post('https://schoolwebsite-w7bl.onrender.com/login', formData);
+            console.log("data tranffered successfully",res);
 
             if (res.status==200) {
                 setError('');

@@ -12,7 +12,7 @@ function Admin() {
   useEffect(() => {
 
     axios
-      .get('https://schoolwebsite-5ayf.onrender.com/allreport')
+      .get('https://schoolwebsite-w7bl.onrender.com/allreport')
       .then((res) => {
         console.log(res);
 
@@ -20,7 +20,7 @@ function Admin() {
 
       })
       .catch((err) => {
-        console.log(err);
+        console.log("somthing went wrong",err);
 
 
       });

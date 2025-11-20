@@ -23,12 +23,12 @@ function ApplyForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/report', formData);
+      await axios.post('https://schoolwebsite-w7bl.onrender.com/report', formData);
       setSubmitted(true);
       setFormData({ name: '', email: '', phone: '', grade: '', message: '' }); 
       console.log('success');
     } catch (error) {
-      console.error('Submission failed:', error);
+      console.error('Submission failed please check again:', error);
     }
   };
 
