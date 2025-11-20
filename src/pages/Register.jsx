@@ -8,6 +8,8 @@ function Register() {
 
     const navigate = useNavigate();
     const [error, setError] = useState('');
+    const [RegisterData, setRegisterData] = useState({name:"", email: '', password: '' });
+        console.log(RegisterData);
 
     const handleChange = (e) =>
         setRegisterData({ ...RegisterData, [e.target.name]: e.target.value });
